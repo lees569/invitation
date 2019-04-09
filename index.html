@@ -431,7 +431,13 @@ ul.social li{
 	color: rgba(255,255,255,1);
 }
 
-
+.map_wrap {
+	margin: 0 ;
+	height: 300px;
+	background-color: #ddd;
+	text-align: center;
+	font-size: 14px;
+}
 @media screen and (max-width: 500px) {
 
 	.icon{
@@ -480,7 +486,9 @@ ul.social li{
             		<td>
             			<div class="text" style="text-align: center;">
                             <h2>FLORAL HAND MASK</h2>
-                            <h3 style="color: white;">Nature, Bien-etre et Moi</h3>
+                            <h3 style="color: white;">Nature, Bien-etre et Moi
+                            <br><br><br>1ST COLLABORATION LAUNCH PARTY
+                            </h3>
             			</div>
             		</td>
             	</tr>
@@ -505,13 +513,17 @@ and join our special day to find your querencia with Toi:L.</p>
                                   <tr>
                                     <td class="bg_white email-section">
                                         <div class="heading-section" style="text-align: center; padding: 0 30px;">
-                                        <h4 style="font-weight: 800;">1ST COLLABORATION<br>LAUNCH PARTY</h4>
+<!--                                        <h4 style="font-weight: 800;">1ST COLLABORATION<br>LAUNCH PARTY</h4>-->
                                         <p>Thursday, 25th of April 2019<br>
                                             PRESS: 1 - 3 PM<br>
-                                            VIP: 3 - 5 PM<br><br>
+                                            VIP: 3 - 5 PM<br>
+                                            Dekant, Cheongdam<br>
+                                            서울 강남구 압구정로72길 10 2층 데칸트
+                                            <br><br>
                                             R.S.V.P<br>ANGELA CHO AT 010.3090.8947 
                                             </p>
                                         </div>
+<!--
                                         <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                                             <tr>
                                       <td valign="top" width="50%">
@@ -538,14 +550,18 @@ and join our special day to find your querencia with Toi:L.</p>
                                         </table>
                                       </td>
 
-                                  </tr><!-- end: tr -->
+                                  </tr>
 
                                 </table>
+-->
 
                               </td>
                             </tr><!-- end:tr -->
+                                    
                               <tr>
-                                  <td valign="middle" class="counter" style="background-image: url(images/bg_1.jpg); background-size: cover; padding: 4em 0;">
+                                  <td valign="middle" class="counter" style="padding:0 0 3em;">
+                                       <div class="map_wrap" id="map"></div>
+<!--
                                     <div class="overlay"></div>
                                     <table>
                                         <tr>
@@ -581,10 +597,13 @@ and join our special day to find your querencia with Toi:L.</p>
                                   </td>
                                         </tr>
                                     </table>
+-->
                                   </td>
-                                  </tr><!-- end tr -->
-				    
-	
+                                  </tr>
+                                    
+                                    <!-- end tr -->
+				           
+	   
 		        </table>
 
 		      </td>
@@ -602,11 +621,11 @@ and join our special day to find your querencia with Toi:L.</p>
                             <td valign="top" width="40%" style="padding-top: 20px;">
                               <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                                 <tr>
-                                  <td style="text-align: left; padding-left: 5px; padding-right: 5px;">
-                                    <h3 class="heading">Contact Info</h3>
+                                  <td style="text-align: center; padding-left: 5px; padding-right: 5px;">
+                                    <h3 class="heading">Contact</h3>
                                     <ul>
-                                                <li><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-                                                <li><span class="text">+2 392 3929 210</span></li>
+                                                <li><span class="text">#204, 182, Hyoryeong-ro, Seocho-gu, Seoul, Korea</span></li>
+                                                <li><span class="text">02 2088 0060</span></li>
                                               </ul>
                                   </td>
                                 </tr>
@@ -620,24 +639,16 @@ and join our special day to find your querencia with Toi:L.</p>
                         <td valign="middle" class="bg_black footer email-section">
                             <table>
                             <tr>
-                            <td valign="top" width="33.333%">
+                            <td valign="top">
                               <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                                 <tr>
-                                  <td style="text-align: left; padding-right: 10px;">
-                                    <p>&copy; 2018 Travel. All Rights Reserved</p>
+                                  <td style="text-align: center; padding-right: 10px;">
+                                    <p>&copy; 2019 Toi:L. All Rights Reserved</p>
                                   </td>
                                 </tr>
                               </table>
                             </td>
-                            <td valign="top" width="33.333%">
-                              <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                                <tr>
-                                  <td style="text-align: right; padding-left: 5px; padding-right: 5px;">
-                                    <p><a href="#" style="color: rgba(255,255,255,.4);">Unsubcribe</a></p>
-                                  </td>
-                                </tr>
-                              </table>
-                            </td>
+                        
                           </tr>
                         </table>
                         </td>
@@ -647,4 +658,62 @@ and join our special day to find your querencia with Toi:L.</p>
     </div>
   </center>
 </body>
+    
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?signed_in=true"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>
+	<script>
+	var latlng = "37.525880, 127.045015"; //구글맵에서 위치 검색 후, 맵을 클릭하면 나오는 하단의 좌표를 입력한다.
+
+	function initMap() {
+		if (latlng.length <= 0)
+			return false;
+		arr = latlng.split(",");
+		if (arr.length <= 1)
+			return false;
+
+		var myLatLng = {
+			lat : parseFloat($.trim(arr[0])),
+			lng : parseFloat($.trim(arr[1]))
+		};
+		var map = new google.maps.Map(document.getElementById('map'), {
+			zoom : 17,
+			center : myLatLng
+		});
+		var arr = [];
+
+		new google.maps.Marker({
+			position : myLatLng,
+			map : map
+		});
+	}
+	$(function(e) {
+		initMap();
+		
+		var targetEle = $("#autoplay");
+		targetEle.find("img").css("cssText" , "width:" + targetEle.width() + "px !important;");
+		targetEle.slick({
+			slidesToShow : 1,
+			slidesToScroll : 1,
+			autoplay : true,
+			autoplaySpeed : 2000,
+			dots: false,
+		  	infinite: true,
+		  	variableWidth: true
+		});
+		targetEle.css({"display" : "block"});
+		var tmpHeight = 0;
+		targetEle.find("img").first().load(function(e) {
+			targetEle.find("img").each(function(k, v) {
+				var _this = $(this);
+				if( tmpHeight == 0 || tmpHeight > _this.height() ) {
+					tmpHeight = _this.height();
+				}
+			});
+			$(".slide_wrap").height(tmpHeight);
+		});
+	});
+	
+	</script>
+    
 </html>
